@@ -1,0 +1,49 @@
+{% load static %}
+{% block content %}
+
+<body style="text-align: center">
+    <form action={% url 'processing' %} method = "post">{% csrf_token %}
+        <h1>Part 2</h1>
+        <!-- Operating system SELECTION -->
+        <p>Select your favorite operating system</p>
+        <input type="radio" id="Mac_OS" name="user_os" value="Mac OS">
+        <label for="Mac_OS">Mac OS</label><br>
+                
+        <input type="radio" id="win" name="user_os" value="Windows 10">
+        <label for="win">Windows 10</label><br>
+
+        <input type="radio" id="linux" name="user_os" value="Linux">
+        <label for="linux">Linux</label>
+
+        <!-- USER PHONE -->
+        <p>What brand of phone do you have?</p>
+        <input type="text" name="user_phone" required>
+        <br><br>
+
+        <!-- PHONE Satisfaction -->
+        <div class="container">
+            <p>How satisfied are you with your phone?</p>
+            <label class="radio-inline">
+            <input type="radio" name="phone_sat" value="1">Very unsatisfied</label>
+
+            <label class="radio-inline">
+            <input type="radio" name="phone_sat" value="2">Unsatisfied</label>
+
+            <label class="radio-inline">
+            <input type="radio" name="phone_sat" value="3">Neutral</label>
+
+            <label class="radio-inline">
+            <input type="radio" name="phone_sat" value="4">Satisfied</label>
+
+            <label class="radio-inline">
+            <input type="radio" name="phone_sat" value="5">Very satisfied</label>
+        </div>
+        <br><br>
+
+        <input type="submit" value="Continue">
+    </form>
+</body>
+
+ 
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% load static %}
+{% block content %}
+
+<body style="text-align: center">
+    <form action={% url 'part_2' %} method = "post">{% csrf_token %}
+        <h1>Part 1</h1>
+        <!-- NAME ENTRY-->
+        <label for="name">Name: </label>
+        <input type="text" name="name" required>
+
+        <!-- AGE ENTRY -->
+        <label for="age">Age: </label>
+        <input type="text" name="age" required>
+
+        <!-- MAJOR SELECTION -->
+        <p>Select your major</p>
+        <input type="radio" id="IT_IN" name="major" value="IT Innovation">
+        <label for="IT_IN">IT Innovation</label><br>
+        
+        <input type="radio" id="COMP_SCI" name="major" value="Computer Science">
+        <label for="COMP_SCI">Computer Science</label><br>
+
+        <input type="radio" id="MIS" name="major" value="MIS">
+        <label for="MIS">MIS</label><br><br>
+
+        <input type="submit" value="Continue">
+    </form>
+</body>
+
+ 
+
+{% endblock %}

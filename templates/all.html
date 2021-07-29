@@ -1,0 +1,18 @@
+{% load static %}
+{% block content %}
+
+<body style="font-family: Arial, Heveltica, sans-serif";>
+    <div>
+        <h1>List of all users</h1>
+        <ul>
+            {% for user in users %}
+                <li>{{ user.sonaID }}</li>
+            {% endfor %}
+        </ul>
+        <br><br>
+    </div>
+
+</body>
+
+
+{% endblock %}

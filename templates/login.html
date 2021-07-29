@@ -1,0 +1,14 @@
+{% load static %}
+{% block content %}
+
+<body style="text-align: center">
+    <form action={% url 'instructions' %} method = "post">{% csrf_token %}
+        <label for="sonaID">Sona ID: </label>
+        <input type="text" name="sonaID" required>
+        <input type="submit" value="Continue">
+    </form>
+</body>
+
+ 
+
+{% endblock %}

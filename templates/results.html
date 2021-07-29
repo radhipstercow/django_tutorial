@@ -1,0 +1,43 @@
+{% load static %}
+{% block content %}
+
+<body style="font-family: Arial, Heveltica, sans-serif";>
+    <div>
+        <h1>Your results</h1>
+
+        <h3>Sona and Session Info</h3>
+        <ul style="list-style-type:none;">
+            <li><span style="font-weight:bold">SONA: </span> {{ sona.sonaID }}</li>
+            <li><span style="font-weight:bold">Session: </span>{{ session }}</li>
+        </ul>
+
+        <h3>Part 1</h3>
+        <ul style="list-style-type:none;">
+            <li><span style="font-weight:bold">Name: </span> {{ p1_name }}</li>
+            <li><span style="font-weight:bold">Age: </span> {{ p1_age }}</li>
+            <li><span style="font-weight:bold">Age: </span> {{ p1_major }}</li>
+        </ul>
+
+        <h3>Part 2</h3>
+        <ul style="list-style-type:none;">
+            <li><span style="font-weight:bold">Advanced Degree (1=YES, 0=NO): </span> {{ p2_degree }}</li>
+            <li><span style="font-weight:bold">Dream job: </span> {{ p2_dream_Job }}</li>
+        </ul>
+
+        <h3>Part 3</h3>
+        <ul style="list-style-type:none;">
+            <li><span style="font-weight:bold">Operating system: </span> {{ p3_os }}</li>
+            <li><span style="font-weight:bold">Phone: </span> {{ p3_phone }}</li>
+            <li><span style="font-weight:bold">Phone satisfaction: </span> {{ p3_sats }}</li>
+        </ul>
+ 
+        <br><br>
+        <a href="{% url 'all' %}"><button style="background-color:blue; color:white">All users</button></a>
+
+
+
+    </div>
+</body>
+
+
+{% endblock %}

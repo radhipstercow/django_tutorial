@@ -1,0 +1,37 @@
+{% load static %}
+{% block content %}
+
+<script>
+
+var check_as = document.getElementById("as");
+var check_ba = document.getElementById("ba");
+
+
+
+</script>
+
+<body style="text-align: center">
+    <form action={% url 'part_3' %} method = "post">{% csrf_token %}
+        <h1>Part 2</h1>
+        <!-- DEGREE SELECTION -->
+        <p>Degree question:</p>
+        <input type="radio" id="yes" name="advanced_degree" value="1">
+        <label for="yes">Yes, I have an advanced degree</label>
+        <input type="radio" id="no" name="advanced_degree" value="0">
+        <label for="no">No, I do not an advanced degree</label><br>
+
+
+        
+        
+
+        <p>What is your dream job?</p>
+        <input type="text" name="dream_Job" required>
+        <br><br>
+
+        <input type="submit" value="Continue">
+    </form>
+</body>
+
+ 
+
+{% endblock %}
